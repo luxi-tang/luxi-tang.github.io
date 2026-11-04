@@ -3,135 +3,215 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aaron Tang</title>
-<meta name="description" content="Aaron Tang — field service and technical coordination for locomotive projects in Australia.">
-<style>
-  :root{
-    --bg:#fbfaf7; --text:#1f2328; --muted:#5d6670; --line:#e4e1da; --accent:#a3312b;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#16181b; --text:#e8e6e1; --muted:#9aa3ad; --line:#2c3035; --accent:#e0786f; }
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);
-    font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","PingFang SC",sans-serif;}
-  .wrap{max-width:760px;margin:0 auto;padding:56px 20px 80px}
-  header{display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin-bottom:40px}
-  .photo{width:120px;height:120px;border-radius:50%;background:var(--line);
-    display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;flex-shrink:0}
-  h1{margin:0;font-size:34px;letter-spacing:-.01em}
-  h1 small{font-size:18px;font-weight:400;color:var(--muted);margin-left:8px}
-  .role{margin:6px 0 0;color:var(--muted)}
-  nav{margin-top:12px;display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
-  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-  h2{font-size:14px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);
-    border-bottom:1px solid var(--line);padding-bottom:8px;margin:44px 0 18px}
-  .item{display:grid;grid-template-columns:130px 1fr;gap:4px 20px;margin-bottom:22px}
-  .when{color:var(--muted);font-size:15px;padding-top:2px}
-  .item h3{margin:0;font-size:17px}
-  .item .org{color:var(--muted);font-size:15px}
-  .item ul{margin:6px 0 0;padding-left:18px}
-  .tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
-  .tags li{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px}
-  .todo{background:#fff3c4;color:#6b5200;padding:0 4px;border-radius:3px}
-  @media (prefers-color-scheme: dark){ .todo{background:#4a3d00;color:#ffe48a} }
-  footer{margin-top:60px;color:var(--muted);font-size:14px}
-  @media (max-width:560px){ .item{grid-template-columns:1fr} h1{font-size:28px} }
-</style>
+<meta name="theme-color" content="#17181c">
+<title>Luxi (Aaron) Tang</title>
+<meta name="description" content="Luxi (Aaron) Tang 唐禄玺 — field service and technical coordination for locomotive projects in Australia, CRRC Ziyang Co., Ltd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div class="wrap">
-
-<header>
-  <div class="photo">Photo</div>
-  <div>
-    <h1>Aaron Tang<small>唐禄玺</small></h1>
-    <p class="role">Field Service &amp; Technical Coordination · CRRC Ziyang Australia<br>Cootamundra, NSW, Australia</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<body id="top">
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">L</span><span class="full">Luxi (Aaron) Tang</span><span class="cn">唐禄玺</span></a>
+    <button type="button" class="menubtn" id="menubtn" aria-expanded="false" aria-controls="menu">Menu <i>+</i></button>
   </div>
 </header>
+<nav class="menu" id="menu" aria-label="Site">
+  <div class="wrap">
+    <div class="lbl">Explore / Luxi Tang</div>
+    <ol><li><a href="#overview"><small>01</small>Overview<span class="arr">↘</span></a></li><li><a href="#experience"><small>02</small>Experience<span class="arr">↘</span></a></li><li><a href="#education"><small>03</small>Education<span class="arr">↘</span></a></li><li><a href="#honors"><small>04</small>Certifications &amp; honors<span class="arr">↘</span></a></li><li><a href="#skills"><small>05</small>Skills<span class="arr">↘</span></a></li><li><a href="#hometown"><small>06</small>Menghai, Xishuangbanna<span class="arr">↘</span></a></li><li><a href="photography.html"><small>07</small>Photography<span class="arr">↗</span></a></li><li><a href="Luxi_Tang_CV.pdf" download><small>08</small>Download CV<span class="arr">↗</span></a></li></ol>
+  </div>
+</nav>
 
-<section id="about">
-  <h2>About</h2>
-  <p>I work on locomotive projects in Australia for CRRC Ziyang, supporting customers on site and coordinating technical matters between Australian operators and our engineering teams in China. I'm part of the company's market group, with a focus on understanding customer needs and the Australian rail market.</p>
-  <p>Outside my day job, I'm interested in network science, in particular how opinions spread and evolve in groups.</p>
-</section>
+<main class="wrap">
 
-<section id="experience">
-  <h2>Experience</h2>
-
-  <div class="item">
-    <div class="when"><span class="todo">20XX</span> – Present</div>
+  <div class="hero" id="overview">
     <div>
-      <h3>Field Service &amp; Technical Coordination</h3>
-      <div class="org">CRRC Ziyang Australia Pty Ltd · NSW, Australia</div>
-      <ul>
-        <li>On-site service support for locomotives delivered to Australian rail operators</li>
-        <li>Technical liaison between customers, local partners and engineering teams in China</li>
-        <li>Coordinating site logistics, visits and documentation for travelling project staff</li>
+      <div class="hello">Hello, I'm</div>
+      <h1>Luxi <em>(Aaron)</em><br>Tang<span class="dot">.</span></h1>
+      <div class="cnname">唐禄玺</div>
+      <p class="role">Field Service &amp; Technical Coordination<br><span>CRRC Ziyang Co., Ltd. · Cootamundra &amp; Melbourne, Australia</span></p>
+      <p class="lead">I help keep <em>locomotives</em> running for Australian rail operators — on site, on the road, and between teams on two continents.</p>
+      <div class="cta">
+        <a class="btn" href="Luxi_Tang_CV.pdf" download>Download CV ↗</a>
+        <a class="ghost" href="#experience">Experience ↘</a>
+      </div>
+      <div class="links">
+        <a href="mailto:aarong3w6.oo@gmail.com">Email</a><span>·</span>
+        <a href="https://github.com/luxi-tang">GitHub</a><span>·</span>
+        <a href="photography.html">Photography ↗</a>
+      </div>
+    </div>
+    <div>
+      <figure class="frame">
+        <img src="img/field.jpg" alt="Luxi Tang working on a locomotive electrical cabinet">
+        <figcaption>01 / In the field</figcaption>
+      </figure>
+      <div class="under"><span>Rail · People · Places</span><span>China → Australia</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>20,000<i>+</i></b><span>km driven across regional Australia in six months</span></div>
+    <div class="stat"><b>2</b><span>countries, one project team</span></div>
+    <div class="stat"><b>2024</b><span>Outstanding Trainee, CRRC Ziyang</span></div>
+    <div class="stat"><b>B.Eng.</b><span>Measurement &amp; Control, Dalian Jiaotong University</span></div>
+  </div>
+
+  <section class="block" id="about">
+    <div class="label"><b>01</b>Overview</div>
+    <div>
+      <h2>Between the workshop <em>and the customer.</em></h2>
+      <p class="prose">I work on locomotive projects in Australia for CRRC Ziyang, supporting customers on site and coordinating technical matters between Australian operators and our engineering teams in China. I'm part of the company's market group, with a focus on understanding customer needs and the Australian rail market.</p>
+      <ul class="chips">
+        <li>Locomotive field service</li>
+        <li>Technical liaison</li>
+        <li>Team coordination</li>
+        <li>Australian rail market</li>
       </ul>
     </div>
-  </div>
+  </section>
 
-  <div class="item">
-    <div class="when"><span class="todo">20XX</span> – Present</div>
+  <section class="block" id="experience">
+    <div class="label"><b>02</b>Experience</div>
     <div>
-      <h3>Market Development</h3>
-      <div class="org">CRRC Ziyang Locomotive Co., Ltd · Market Group</div>
-      <ul>
-        <li>Supporting market development for locomotive products in Australia</li>
-        <li>Helping build a market and technical intelligence system for the business</li>
+      <h2>Professional <em>experience.</em></h2>
+      <div class="entry">
+        <div class="when">Nov 2025 — Present</div>
+        <div>
+          <h3>Field Service &amp; Technical Coordination</h3>
+          <div class="org">CRRC Ziyang Co., Ltd. · On assignment in Australia (Cootamundra &amp; Melbourne)</div>
+          <ul>
+            <li>On-site service support for locomotives delivered to Australian rail operators</li>
+            <li>Technical liaison between customers, local partners and engineering teams in China</li>
+            <li>Coordinating the on-site team in Australia, including accommodation, transport and day-to-day logistics</li>
+            <li>Drove 20,000+ km across regional Australia in six months supporting site work and team travel</li>
+            <li>Arranging visits and travel documentation for project staff coming from China</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">Jul 2024 — Present</div>
+        <div>
+          <h3>Market Development</h3>
+          <div class="org">CRRC Ziyang Co., Ltd. · Market Group</div>
+          <ul>
+            <li>Supporting market development for locomotive products in Australia</li>
+            <li>Helping build a market and technical intelligence system for the business</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="education">
+    <div class="label"><b>03</b>Education</div>
+    <div>
+      <h2><em>Education.</em></h2>
+      <div class="entry">
+        <div class="when">2020 — 2024</div>
+        <div>
+          <h3>Dalian Jiaotong University</h3>
+          <div class="org">Bachelor of Engineering · Measurement and Control Technology and Instrumentation</div>
+          <p>Dalian, Liaoning, China</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="honors">
+    <div class="label"><b>04</b>Credentials</div>
+    <div>
+      <h2>Certifications &amp; <em>honors.</em></h2>
+      <h3 class="sub">Certifications</h3>
+      <div class="entry">
+        <div class="when">2025</div>
+        <div><h3>Railway Locomotive Electrician — Intermediate Level</h3><div class="org">China</div></div>
+      </div>
+      <div class="entry">
+        <div class="when">2025</div>
+        <div><h3>Working at Heights Operation Certificate</h3><div class="org">China</div></div>
+      </div>
+      <h3 class="sub">Selected honors</h3>
+      <div class="entry">
+        <div class="when">2024</div>
+        <div><h3>Outstanding Trainee of the Year</h3><div class="org">CRRC Ziyang Co., Ltd.</div></div>
+      </div>
+      <div class="entry">
+        <div class="when">Award</div>
+        <div><h3>English Speaking Competition — 1st Place (Team)</h3><div class="org">Also received a Best Individual Performance award (one of three recipients)</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="skills">
+    <div class="label"><b>05</b>Skills</div>
+    <div>
+      <h2>Skills &amp; <em>tools.</em></h2>
+      <ul class="chips" style="margin-top:0">
+        <li>Locomotive field service</li>
+        <li>Customer technical liaison</li>
+        <li>Project coordination</li>
+        <li>Team logistics</li>
+        <li>Market research</li>
+        <li>English · Mandarin</li>
       </ul>
+      <p class="note">Basic experience with Multisim, Altium Designer and STM32 microcontroller development.</p>
     </div>
-  </div>
+  </section>
 
-  <div class="item">
-    <div class="when"><span class="todo">20XX</span></div>
+  <section class="block" id="hometown">
+    <div class="label"><b>06</b>Hometown</div>
     <div>
-      <h3>Research Collaboration</h3>
-      <div class="org">Network science · opinion dynamics on hypergraphs</div>
-      <ul>
-        <li>Modelling multidimensional opinion dynamics in group (higher-order) interactions</li>
-      </ul>
+      <h2>Menghai, <em>Xishuangbanna.</em></h2>
+      <p class="prose">I grew up in Menghai County in Xishuangbanna, in the far south of Yunnan — Pu'er tea country, where my grandmother's village sits up in the tea mountains.</p>
+      <div class="home-grid">
+        <figure><img loading="lazy" src="img/hometown.jpg" alt="Grandma's village in the tea mountains of Menghai"><figcaption>Grandma's village in the tea mountains · Feb 2026</figcaption></figure>
+        <figure><img loading="lazy" src="img/hometown-dusk.jpg" alt="Dusk over Menghai"><figcaption>Dusk over Menghai</figcaption></figure>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="item">
-    <div class="when"><span class="todo">20XX – 20XX</span></div>
+  <section class="block" id="life">
+    <div class="label"><b>07</b>Beyond work</div>
     <div>
-      <h3><span class="todo">Degree, Major</span></h3>
-      <div class="org"><span class="todo">University</span></div>
+      <h2>A life <em>beyond the rails.</em></h2>
+      <div class="life">
+        <div><b>Morning runs</b><span>Along the Yarra in Melbourne and the beaches of Coogee and Bondi.</span></div>
+        <div><b>Swimming</b><span>Learned at Lunar New Year 2026 — in Bondi's ocean pool by June.</span></div>
+        <div><b>Road trips</b><span>From the Snowy Mountains to the Central Coast, usually with a camera.</span></div>
+        <div><b>Photography</b><span>Coastlines, country towns, skies and the occasional kangaroo.</span></div>
+      </div>
+      <div class="strip"><a href="photography.html"><img loading="lazy" src="gallery/24-grandmas-village.jpg" alt=""></a><a href="photography.html"><img loading="lazy" src="gallery/09-the-entrance.jpg" alt=""></a><a href="photography.html"><img loading="lazy" src="gallery/47-lake-albert-sunset.jpg" alt=""></a><a href="photography.html"><img loading="lazy" src="gallery/41-harbour-bridge.jpg" alt=""></a></div>
+      <p style="margin-top:20px"><a class="ghost" href="photography.html">Selected photographs ↗</a></p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <h2>Skills</h2>
-  <ul class="tags">
-    <li>Locomotive field service</li>
-    <li>Customer technical liaison</li>
-    <li>Project coordination</li>
-    <li>Market research</li>
-    <li>English · Mandarin</li>
-  </ul>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:aarong3w6.oo@gmail.com">aarong3w6.oo@gmail.com</a><br>
-     GitHub: <a href="https://github.com/luxi-tang">github.com/luxi-tang</a><br>
-     LinkedIn: <a href="#"><span class="todo">add link later</span></a></p>
-</section>
-
-<footer>© 2026 Aaron Tang</footer>
-</div>
+  <section class="block contact" id="contact">
+    <div class="label"><b>08</b>Contact</div>
+    <div>
+      <h2>Let's stay <em>connected.</em></h2>
+      <p><a class="big" href="mailto:aarong3w6.oo@gmail.com">aarong3w6.oo@gmail.com</a></p>
+      <div class="iconrow">
+        <a href="https://github.com/luxi-tang">GitHub ↗</a>
+        <a href="photography.html">Photography ↗</a>
+        <a href="Luxi_Tang_CV.pdf" download>Download CV ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="wrap">
+  <span>© 2026 Luxi (Aaron) Tang 唐禄玺</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+<script>
+(function(){var b=document.getElementById('menubtn'),m=document.getElementById('menu');
+function set(o){document.body.classList.toggle('menu-open',o);b.setAttribute('aria-expanded',o);}
+b.addEventListener('click',function(){set(!document.body.classList.contains('menu-open'));});
+m.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
+</script>
 </body>
 </html>
