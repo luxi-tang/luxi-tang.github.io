@@ -31,7 +31,7 @@
     <h1>Places I've <em>been.</em></h1>
     <p class="prose">From the tea mountains of Menghai to the Snowy Mountains, the Sydney coast and the wheat country around Cootamundra — photos I've taken along the way.</p>
     <div class="gtabs" role="tablist">
-      <button type="button" class="gtab on" data-mode="hl" role="tab" aria-selected="true">Highlights <span>48</span></button>
+      <button type="button" class="gtab on" data-mode="hl" role="tab" aria-selected="true">Highlights <span>47</span></button>
       <button type="button" class="gtab" data-mode="all" role="tab" aria-selected="false">All photos <span>66</span></button>
     </div>
     <div class="gjump"><a href="#g0">Home · Menghai, Yunnan</a><a href="#g1">Melbourne &amp; Victoria</a><a href="#g2">Sydney &amp; the coast</a><a href="#g3">Regional New South Wales</a><a href="#g4">Queensland</a></div>
@@ -54,10 +54,14 @@
 <script>
 (function(){
   var wrap=document.getElementById('gwrap'),tabs=document.querySelectorAll('.gtab');
-  document.querySelectorAll('.ggroup').forEach(function(g){g.classList.toggle('empty',!g.querySelector('.gitem[data-hl="1"]'));});
+  var groups=document.querySelectorAll('.ggroup');
+  function counts(hl){groups.forEach(function(g){var n=g.querySelectorAll(hl?'.gitem[data-hl="1"]':'.gitem').length;
+    g.querySelector('.ghead small').textContent=n+(n===1?' photo':' photos');});}
+  groups.forEach(function(g){g.classList.toggle('empty',!g.querySelector('.gitem[data-hl="1"]'));});
+  counts(true);
   tabs.forEach(function(t){t.addEventListener('click',function(){
     tabs.forEach(function(x){x.classList.toggle('on',x===t);x.setAttribute('aria-selected',x===t);});
-    wrap.className=t.dataset.mode==='hl'?'mode-hl':'';});});
+    var hl=t.dataset.mode==='hl';wrap.className=hl?'mode-hl':'';counts(hl);});});
   var lb=document.getElementById('lb'),img=document.getElementById('lbimg'),cur=[],i=0;
   function visible(){return Array.prototype.filter.call(document.querySelectorAll('.gitem'),function(f){return f.offsetParent!==null;});}
   function show(){var f=cur[i],c=f.querySelector('figcaption');img.src=f.querySelector('img').src;img.alt=c.querySelector('b').textContent;
